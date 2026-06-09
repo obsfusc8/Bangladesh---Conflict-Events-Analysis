@@ -132,20 +132,82 @@ Each file contains a `Data` sheet with `Year`, `Month`, `Events`, and (for PV/CT
 
 ---
 
-## Output Figures
+## Visualisations
 
-| File | Description |
-|------|-------------|
-| `fig_01_timeseries.png` | Full monthly time series with rolling averages & event annotations |
-| `fig_02_annual.png` | Annual aggregates, fatality stacks, YoY change, fatality rates |
-| `fig_03_heatmap.png` | Year × Month seasonal heat-maps |
-| `fig_04_seasonality.png` | Monthly box-plots and mean trends |
-| `fig_05_scatter.png` | Events vs. fatalities regression plots |
-| `fig_06_corrmat.png` | Cross-series Pearson correlation matrix |
-| `fig_07_distributions.png` | Distribution histograms and Q-Q plots |
-| `fig_08_decomposition.png` | STL decomposition panels (3 × 4) |
-| `fig_09_acf.png` | ACF and PACF plots (36 lags) |
-| `fig_10_dashboard.png` | Composite intelligence dashboard |
+> Place rendered notebook outputs in a `figures/` folder at the repo root for the images below to display.
+
+---
+
+<p align="center">
+  <img src="figures/fig_01_timeseries.png" alt="Time-series overview" width="100%">
+</p>
+<p align="center"><em><strong>Fig 1 · Monthly Time-Series Overview</strong> — Event counts (bars) overlaid with 3-month (dashed) and 12-month (white) rolling averages. Shaded bands mark key political periods: the 2013–14 election violence, the 2015 BNP blockade, and the July 2024 student uprising — the sharpest discontinuity in the entire 16-year record.</em></p>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+<img src="figures/fig_02_annual.png" alt="Annual aggregates" width="100%">
+<p align="center"><em><strong>Fig 2 · Annual Aggregates & YoY Change</strong> — Four panels: grouped event counts, stacked fatality totals, year-on-year % change, and per-event fatality rates. The 2024 column dominates every panel.</em></p>
+</td>
+<td width="50%">
+<img src="figures/fig_03_heatmap.png" alt="Seasonal heatmaps" width="100%">
+<p align="center"><em><strong>Fig 3 · Seasonal Heat-Maps</strong> — Year × Month pivot grids for all three series. Q4 cells consistently run hot for political violence; demonstrations scatter more evenly across the calendar.</em></p>
+</td>
+</tr>
+</table>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+<img src="figures/fig_04_seasonality.png" alt="Monthly seasonality" width="100%">
+<p align="center"><em><strong>Fig 4 · Monthly Seasonality Profile</strong> — Box-plots aggregated across all years with means marked by white diamonds. Right-skewed boxes across November–December confirm the end-of-year political agitation cycle.</em></p>
+</td>
+<td width="50%">
+<img src="figures/fig_05_scatter.png" alt="Events vs fatalities regression" width="100%">
+<p align="center"><em><strong>Fig 5 · Events vs. Fatalities (OLS)</strong> — Points coloured by year on a plasma scale. The loose scatter and fat upper tail signal non-linear, shock-driven lethality — most months cluster low; a handful of crisis months pull the regression line steeply.</em></p>
+</td>
+</tr>
+</table>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+<img src="figures/fig_06_corrmat.png" alt="Correlation matrix" width="100%">
+<p align="center"><em><strong>Fig 6 · Cross-Series Correlation Matrix</strong> — Lower-triangle Pearson heatmap. PV and CT events are tightly coupled (r ≈ 0.8+), while demonstrations show moderate positive co-movement — but their periodic decoupling is what makes the series analytically interesting.</em></p>
+</td>
+<td width="50%">
+<img src="figures/fig_07_distributions.png" alt="Distributions" width="100%">
+<p align="center"><em><strong>Fig 7 · Distribution Analysis</strong> — Histograms with KDE overlays and Q-Q plots. All three series are right-skewed and leptokurtic; the long right tails are driven almost entirely by 2024 crisis months.</em></p>
+</td>
+</tr>
+</table>
+
+---
+
+<p align="center">
+  <img src="figures/fig_08_decomposition.png" alt="STL decomposition" width="100%">
+</p>
+<p align="center"><em><strong>Fig 8 · STL Seasonal Decomposition</strong> — Additive decomposition across all three series (rows) into observed, trend, seasonal, and residual components (columns). The trend panel reveals the structural upward shift post-2020; the seasonal component shows the recurring annual pulse independent of crisis spikes.</em></p>
+
+---
+
+<p align="center">
+  <img src="figures/fig_09_acf.png" alt="ACF and PACF" width="100%">
+</p>
+<p align="center"><em><strong>Fig 9 · Autocorrelation (ACF) & Partial Autocorrelation (PACF) — 36 Lags</strong> — Significant spikes at lags 1–3 confirm short-term persistence: a violent month predicts the next. The 12-month seasonal echo is weaker but visible, reflecting Bangladesh's annual political calendar.</em></p>
+
+---
+
+<p align="center">
+  <img src="figures/fig_10_dashboard.png" alt="Composite dashboard" width="100%">
+</p>
+<p align="center"><em><strong>Fig 10 · Composite Intelligence Dashboard</strong> — A single publication-ready frame synthesising all three series: stacked area overview with fatality trend, event-share pie, cumulative fatality curves, top-10 deadliest months, annual bubble chart (bubble size ∝ total fatalities), and mean monthly profiles — everything needed for a briefing at a glance.</em></p>
 
 ---
 
